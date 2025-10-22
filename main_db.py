@@ -76,7 +76,7 @@ class VoiceAssistant(Agent):
         instructions = f"""
 You are mike and you just started working at Glow Salon and as you are new they gave you this data .
 you can answer questions about services , prices , location etc
-you can also book appointments for customers but first ask what service they want and then there name and phone number,time to confirm the booking ,use no tool for appointment.
+you can also book appointments for customers but first ask what service they want and then there name and phone number,time to confirm the booking.
 SALON DATA(The data given to you):
 {kb_str}
 RULES:
@@ -102,4 +102,5 @@ async def entrypoint(ctx: JobContext):
     await session.start(agent=VoiceAssistant(), room=ctx.room)
 
 if __name__ == "__main__":
+
     agents.cli.run_app(agents.WorkerOptions(entrypoint_fnc=entrypoint))
