@@ -12,6 +12,16 @@ This project delivers the foundational version of a **Human-in-the-Loop (HITL) s
 | **Automatic Learning Loop** | The supervisor's text response is fed back into the system to be permanently stored for future use. | The answer is used to call **`update_kb()`**, writing to `salon_data.json`. |
 | **Real-time Voice** | Full, low-latency, two-way audio streaming for a natural conversational experience. | Implemented using **LiveKit AgentSession** with AssemblyAI (STT) and OpenAI (TTS). |
 
+***
+
+## 🎥 Video Demonstration (10-Minute Walkthrough)
+
+A 10-minute screen recording walking through the system's live operation, key design decisions, and future improvements.
+
+➡️ **[CLICK HERE FOR VIDEO DEMO](https://youtu.be/aOqcLBFoobo)**
+
+***
+
 ## 📐 Architectural & Design Decisions
 
 The following key decisions were made to prioritize **reliability, modularity, and future scalability**:
@@ -96,3 +106,8 @@ For a production environment, the following enhancements would be prioritized:
 1.  **Phase 2: Live Agent Handoff:** Implement a status check for the human supervisor. If the supervisor is online, use LiveKit's **room capabilities** to bridge the customer's audio stream directly to the supervisor, fulfilling the real-time handoff requirement.
 2.  **Scalable Knowledge Base (RAG):** Replace the flat-file `salon_data.json` with a **Vector Database (RAG)**. This would allow the agent to answer *semantic variations* of a learned question, dramatically improving generalization and reducing the reliance on the human loop.
 3.  **Real-Time Notification:** Replace the database polling mechanism (`asyncio.sleep`) with a server-side **Webhook** or WebSocket notification. The Supervisor GUI's 'Submit' action should instantly push an update to the waiting agent thread, eliminating the 2-second latency delay.
+For questions about this project or its design, please reach out directly:
+
+* **telegram:** [t.me/xczgithub]
+* **Email:** [afridixcz@gmail.com]
+* **LinkedIn/GitHub:** [github.com/xoz3e]
