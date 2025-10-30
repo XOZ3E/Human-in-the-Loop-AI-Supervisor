@@ -1,4 +1,4 @@
-# Frontdesk Human-in-the-Loop Voice Agent
+#  Human-in-the-Loop Voice Agent
 
 This project delivers the foundational version of a **Human-in-the-Loop (HITL) system** for AI agents, built on the LiveKit platform. The goal is to create a self-improving AI receptionist that can intelligently escalate unanswerable customer questions to a human supervisor, prevent AI hallucination, and automatically update its knowledge base.
 
